@@ -1,0 +1,8 @@
+iw dev wlan0 interface add wlan0mon type monitor
+
+echo 3c:a0:67:e3:a5:43 >>cut.txt
+
+mdk3 wlan0mon d -w cut.txt
+
+
+(cmd: speedtest-cli)

